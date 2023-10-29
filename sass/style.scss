@@ -22,6 +22,7 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
+  list-style-type: none;
 }
 
 .container {
@@ -90,6 +91,7 @@ body {
 .list-horizontal {
   li {
     display: inline-block;
+    padding: 0 4px;
   }
 }
 
@@ -103,7 +105,6 @@ body {
 
 /* Post */
 
-
 .post {
   display: none;
 
@@ -116,11 +117,14 @@ body {
   font-style: italic;
 }
 
-
 .post-tags {
   display: flex;
 
   p {
     margin: 0 10px 0 0;
   }
+}
+
+a {
+  text-decoration: none;
 }
