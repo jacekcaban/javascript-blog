@@ -1,8 +1,9 @@
 'use strict';
 
 function titleClickHandler(event){
-    event.preventDefault();
+
     const clickedElement = this;
+    event.preventDefault();
     console.log('Link was clicked!');
 
     /* [done] remove class 'active' from all article links  */
@@ -22,15 +23,15 @@ function titleClickHandler(event){
         activeArticle.classList.remove('active');
     }
     /* [done] get 'href' attribute from the clicked link */
-    const articleSelector = clickedElement.getAttribute('href')
-    console.log(articleSelector)
+    const articleSelector = clickedElement.getAttribute('href');
+    console.log(articleSelector);
 
     /* [done] find the correct article using the selector (value of 'href' attribute) */
-    const targetArticle = document.querySelector(articleSelector)
-    console.log(targetArticle)
+    const targetArticle = document.querySelector(articleSelector);
+    console.log(targetArticle);
 
     /* [done] add class 'active' to the correct article */
-    targetArticle.classList.add('active')
+    targetArticle.classList.add('active');
 }
 
 const optArticleSelector = '.post',
@@ -43,8 +44,10 @@ function generateTitleLinks(){
     const titleList = document.querySelector(optTitleListSelector);
 
     /* for each article */
-    const articles = document.querySelectorAll(optArticleSelector)
+    const articles = document.querySelectorAll(optArticleSelector);
+
     let html = '';
+
     for (let article of articles) {
 
     /* get the article id */
@@ -57,15 +60,20 @@ function generateTitleLinks(){
 
     /* create HTML of the link */
     const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
-    console.log(linkHTML)
+    console.log(linkHTML);
 
     /* insert link into titleList */
-    html = html + linkHTML
+    //titleList.innerHTML = titleList.innerHTML + linkHTML; 
+    //titleList.insertAdjacentHTML('beforeend', linkHTML);
+
+    /* insert link into html variable */
+    html = html + linkHTML;
     }
+    titleList.innerHTML = html;
     console.log(html);
 
     const links = document.querySelectorAll('.titles a');
-    console.log(links)
+    console.log(links);
 
     for(let link of links){
     link.addEventListener('click', titleClickHandler);
