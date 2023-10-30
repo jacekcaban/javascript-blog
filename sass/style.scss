@@ -128,3 +128,32 @@ body {
 a {
   text-decoration: none;
 }
+
+ul.list.tags {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2px;
+}
+
+.tag-size-1 {
+  font-size: 75%;
+  color: red;
+}
+
+.tag-size-2 {
+  font-size: 85%;
+}
+
+.tag-size-3 {
+  font-size: 95%;
+  color: green;
+}
+
+.tag-size-4 {
+  font-size: 105%;
+}
+
+.tag-size-5 {
+  font-size: 120%;
+  color: blue;
+}
