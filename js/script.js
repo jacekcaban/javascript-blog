@@ -296,7 +296,7 @@ function addClickListenersToTags(){
 }
 addClickListenersToTags();
 
-//[in progress] Add authors to articles
+//[done] Add authors to articles
 function generateAuthors() {
   /* [NEW] create a new variable allAuthors with an empty object */
   let allAuthorsList = {};
